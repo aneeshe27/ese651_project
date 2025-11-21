@@ -144,7 +144,10 @@ def main():
     # Extract tensor from TensorDict for policy
     if hasattr(obs, "get"):  # Check if it's a TensorDict
         obs = obs["policy"]  # Extract the policy observation
+
     timestep = 0
+    max_steps = args_cli.video_length if args_cli.video else 10  # or any number you like
+
     # simulate environment
     while simulation_app.is_running():
         # run everything in inference mode
@@ -156,11 +159,11 @@ def main():
             # Extract tensor from TensorDict for policy
             if hasattr(obs, "get"):  # Check if it's a TensorDict
                 obs = obs["policy"]  # Extract the policy observation
-        if args_cli.video:
-            timestep += 1
-            # Exit the play loop after recording one video
-            if timestep == args_cli.video_length:
-                break
+
+        timestep += 1
+        if timestep >= max_steps:
+            print(f"[INFO] Reached max_steps={max_steps}, exiting play loop.")
+            break
 
     # close the simulator
     env.close()
