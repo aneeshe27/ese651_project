@@ -106,14 +106,29 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
     log_dir = os.path.join(log_root_path, log_dir)
 
     # TODO ----- START ----- Define rewards scales
-    # reward scales
-    progress_goal_reward_scale = 50.0
-    crash_reward = -1.0
-    death_cost = -10.0
+    # reward scales - Focus ONLY on gate completion
+    # reward scales - Focus on dense progress and alignment
+    gate_pass_reward_scale = 2000.0         # HUGE reward for passing through gates
+    progress_reward_scale = 100.0           # Dense reward for moving towards target
+    distance_reward_scale = 10.0            # Reward for being close to target
+    centering_reward_scale = 20.0           # Reward for being centered in gate
+    alignment_reward_scale = 10.0           # Increased reward for pointing towards target
+    velocity_reward_scale = 0.0             # Disable direct reward for speed (focus on gates)
+    crash_reward_scale = -100.0             # Penalty for crashing
+    low_altitude_penalty_scale = -10.0      # Penalty for flying too low
+    ang_vel_penalty_scale = -0.1            # Small penalty for smoothness
+    death_cost = -100.0                     # Penalty for episode termination
 
     rewards = {
-        'progress_goal_reward_scale': progress_goal_reward_scale,
-        'crash_reward_scale': crash_reward,
+        'gate_pass_reward_scale': gate_pass_reward_scale,
+        'progress_reward_scale': progress_reward_scale,
+        'distance_reward_scale': distance_reward_scale,
+        'centering_reward_scale': centering_reward_scale,
+        'alignment_reward_scale': alignment_reward_scale,
+        'velocity_reward_scale': velocity_reward_scale,
+        'crash_reward_scale': crash_reward_scale,
+        'low_altitude_penalty_scale': low_altitude_penalty_scale,
+        'ang_vel_penalty_scale': ang_vel_penalty_scale,
         'death_cost': death_cost,
     }
     # TODO ----- END -----

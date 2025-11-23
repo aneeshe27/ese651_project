@@ -26,10 +26,10 @@ import cli_args  # isort: skip
 # add argparse arguments
 parser = argparse.ArgumentParser(description="Train an RL agent with RSL-RL.")
 parser.add_argument("--video", action="store_true", default=False, help="Record videos during training.")
-parser.add_argument("--video_length", type=int, default=2500, help="Length of the recorded video (in steps).")
+parser.add_argument("--video_length", type=int, default=800, help="Length of the recorded video (in steps).")
 parser.add_argument("--disable_fabric", action="store_true", default=False, help="Disable fabric and use USD I/O operations.")
-parser.add_argument("--num_envs", type=int, default=None, help="Number of environments to simulate.")
-parser.add_argument("--task", type=str, default=None, help="Name of the task.")
+parser.add_argument("--num_envs", type=int, default=1, help="Number of environments to simulate.")
+parser.add_argument("--task", type=str, default="Isaac-Quadcopter-Race-v0", help="Name of the task.")
 parser.add_argument("--follow_robot", type=int, default=-1, help="Follow robot index.")
 parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility.")
 
@@ -39,9 +39,28 @@ cli_args.add_rsl_rl_args(parser)
 AppLauncher.add_app_launcher_args(parser)
 args_cli = parser.parse_args()
 
+# Set defaults for convenience
+if args_cli.checkpoint is None:
+    args_cli.checkpoint = "best_model.pt"
+# Set video to True by default
+args_cli.video = True
+
+# Validate that load_run is provided (it's the only required argument)
+if args_cli.load_run is None:
+    parser.error("--load_run is required. Please provide the run folder name to load from.")
+
 # always enable cameras to record video
 if args_cli.video:
     args_cli.enable_cameras = True
+
+# Ensure headless is True right before creating AppLauncher
+# AppLauncher adds headless as a store_true flag, which defaults to False if not provided
+# We override it to True to ensure headless mode is always enabled by default
+# If AppLauncher didn't add the headless argument, we add it ourselves
+if not hasattr(args_cli, 'headless'):
+    setattr(args_cli, 'headless', True)
+else:
+    args_cli.headless = True
 
 # launch omniverse app
 app_launcher = AppLauncher(args_cli)

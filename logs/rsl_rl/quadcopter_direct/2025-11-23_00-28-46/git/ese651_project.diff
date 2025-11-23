@@ -1,0 +1,1541 @@
+--- git status ---
+HEAD detached at db622e4
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/best_model.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/exported/policy.onnx
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/exported/policy.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/videos/play/rl-video-step-0.mp4
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/agent.pkl
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/agent.yaml
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/env.pkl
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/env.yaml
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/best_model.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/events.out.tfevents.1763774352.ip-172-31-2-98.21720.0
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/exported/policy.onnx
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/exported/policy.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/git/ese651_project.diff
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_0_284.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_100_2787.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_150_3021.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_200_3628.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_250_6828.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_300_14168.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_350_19508.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_400_26759.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_450_27493.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_500_33397.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_50_1399.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_550_39597.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_600_54555.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_650_64354.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_700_60118.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_750_1294.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_800_9354.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_850_60088.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_900_825.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_950_817.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_999_811.pt
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/agent.pkl
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/agent.yaml
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/env.pkl
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/env.yaml
+	deleted:    logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/videos/play/rl-video-step-0.mp4
+	modified:   scripts/rsl_rl/play_race.py
+	modified:   scripts/rsl_rl/train_race.py
+	modified:   src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	logs/rsl_rl/quadcopter_direct/2025-11-22_11-30-43/
+	logs/rsl_rl/quadcopter_direct/2025-11-22_11-52-15/
+	logs/rsl_rl/quadcopter_direct/2025-11-22_12-33-50/
+	logs/rsl_rl/quadcopter_direct/2025-11-22_13-02-21/
+	logs/rsl_rl/quadcopter_direct/2025-11-22_13-19-46/
+	logs/rsl_rl/quadcopter_direct/2025-11-23_00-28-46/
+
+no changes added to commit (use "git add" and/or "git commit -a") 
+
+
+--- git diff ---
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/best_model.pt b/logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/best_model.pt
+deleted file mode 100644
+index 2165e75..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/best_model.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/exported/policy.onnx b/logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/exported/policy.onnx
+deleted file mode 100644
+index 2324c01..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/exported/policy.onnx and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/exported/policy.pt b/logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/exported/policy.pt
+deleted file mode 100644
+index 43528a3..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/exported/policy.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/videos/play/rl-video-step-0.mp4 b/logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/videos/play/rl-video-step-0.mp4
+deleted file mode 100644
+index 80d9a40..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-21_01-24-20/videos/play/rl-video-step-0.mp4 and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/agent.pkl b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/agent.pkl
+deleted file mode 100644
+index 4826943..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/agent.pkl and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/agent.yaml b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/agent.yaml
+deleted file mode 100644
+index e4ccc5b..0000000
+--- a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/agent.yaml
++++ /dev/null
+@@ -1,41 +0,0 @@
+-seed: 42
+-device: cuda:0
+-num_steps_per_env: 24
+-max_iterations: 1000
+-empirical_normalization: false
+-policy:
+-  class_name: ActorCritic
+-  init_noise_std: 1.0
+-  actor_hidden_dims:
+-  - 128
+-  - 128
+-  critic_hidden_dims:
+-  - 512
+-  - 256
+-  - 128
+-  - 128
+-  activation: elu
+-  min_std: 0.0
+-algorithm:
+-  class_name: PPO
+-  value_loss_coef: 1.0
+-  use_clipped_value_loss: true
+-  clip_param: 0.2
+-  entropy_coef: 0.0
+-  num_learning_epochs: 5
+-  num_mini_batches: 4
+-  learning_rate: 0.0005
+-  schedule: adaptive
+-  gamma: 0.99
+-  lam: 0.95
+-  desired_kl: 0.01
+-  max_grad_norm: 1.0
+-save_interval: 50
+-experiment_name: quadcopter_direct
+-run_name: ''
+-logger: wandb
+-neptune_project: isaaclab
+-wandb_project: ese651_quadcopter
+-resume: false
+-load_run: .*
+-load_checkpoint: model_.*.pt
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/env.pkl b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/env.pkl
+deleted file mode 100644
+index a61ee0e..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/env.pkl and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/env.yaml b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/env.yaml
+deleted file mode 100644
+index 64724c7..0000000
+--- a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-16-32/params/env.yaml
++++ /dev/null
+@@ -1,331 +0,0 @@
+-viewer:
+-  eye: !!python/tuple
+-  - 7.5
+-  - 7.5
+-  - 7.5
+-  lookat: !!python/tuple
+-  - 0.0
+-  - 0.0
+-  - 0.0
+-  cam_prim_path: /OmniverseKit_Persp
+-  resolution: !!python/tuple
+-  - 1280
+-  - 720
+-  origin_type: world
+-  env_index: 0
+-  asset_name: null
+-  body_name: null
+-sim:
+-  physics_prim_path: /physicsScene
+-  device: cuda:0
+-  dt: 0.002
+-  render_interval: 10
+-  gravity: !!python/tuple
+-  - 0.0
+-  - 0.0
+-  - -9.81
+-  enable_scene_query_support: false
+-  use_fabric: true
+-  physx:
+-    solver_type: 1
+-    min_position_iteration_count: 1
+-    max_position_iteration_count: 255
+-    min_velocity_iteration_count: 0
+-    max_velocity_iteration_count: 255
+-    enable_ccd: false
+-    enable_stabilization: false
+-    enable_enhanced_determinism: false
+-    bounce_threshold_velocity: 0.5
+-    friction_offset_threshold: 0.04
+-    friction_correlation_distance: 0.025
+-    gpu_max_rigid_contact_count: 8388608
+-    gpu_max_rigid_patch_count: 163840
+-    gpu_found_lost_pairs_capacity: 2097152
+-    gpu_found_lost_aggregate_pairs_capacity: 33554432
+-    gpu_total_aggregate_pairs_capacity: 2097152
+-    gpu_collision_stack_size: 67108864
+-    gpu_heap_capacity: 67108864
+-    gpu_temp_buffer_capacity: 16777216
+-    gpu_max_num_partitions: 8
+-    gpu_max_soft_body_contacts: 1048576
+-    gpu_max_particle_contacts: 1048576
+-  physics_material:
+-    func: isaaclab.sim.spawners.materials.physics_materials:spawn_rigid_body_material
+-    static_friction: 1.0
+-    dynamic_friction: 1.0
+-    restitution: 0.0
+-    friction_combine_mode: multiply
+-    restitution_combine_mode: multiply
+-    compliant_contact_stiffness: 0.0
+-    compliant_contact_damping: 0.0
+-  render:
+-    enable_translucency: null
+-    enable_reflections: null
+-    enable_global_illumination: null
+-    antialiasing_mode: null
+-    enable_dlssg: null
+-    enable_dl_denoiser: null
+-    dlss_mode: null
+-    enable_direct_lighting: null
+-    samples_per_pixel: null
+-    enable_shadows: null
+-    enable_ambient_occlusion: null
+-    carb_settings: null
+-    rendering_mode: null
+-  create_stage_in_memory: false
+-ui_window_class_type: src.isaac_quad_sim2real.tasks.race.config.crazyflie.quadcopter_env:QuadcopterEnvWindow
+-seed: 42
+-decimation: 10
+-is_finite_horizon: false
+-episode_length_s: 30.0
+-scene:
+-  num_envs: 8192
+-  env_spacing: 0.0
+-  lazy_sensor_update: true
+-  replicate_physics: true
+-  filter_collisions: true
+-  clone_in_fabric: false
+-events: null
+-observation_space: 1
+-num_observations: null
+-state_space: 0
+-num_states: null
+-observation_noise_model: null
+-action_space: 4
+-num_actions: null
+-action_noise_model: null
+-rerender_on_reset: false
+-wait_for_textures: true
+-xr: null
+-log_dir: null
+-gate_model:
+-  usd_path: ./usd/gate.usda
+-  prim_name: gate
+-  gate_side: 1.0
+-robot:
+-  class_type: isaaclab.assets.articulation.articulation:Articulation
+-  prim_path: /World/envs/env_.*/Robot
+-  spawn:
+-    func: isaaclab.sim.spawners.from_files.from_files:spawn_from_usd
+-    visible: true
+-    semantic_tags: null
+-    copy_from_source: false
+-    mass_props: null
+-    deformable_props: null
+-    rigid_props:
+-      rigid_body_enabled: null
+-      kinematic_enabled: null
+-      disable_gravity: false
+-      linear_damping: null
+-      angular_damping: null
+-      max_linear_velocity: null
+-      max_angular_velocity: null
+-      max_depenetration_velocity: 10.0
+-      max_contact_impulse: null
+-      enable_gyroscopic_forces: true
+-      retain_accelerations: null
+-      solver_position_iteration_count: null
+-      solver_velocity_iteration_count: null
+-      sleep_threshold: null
+-      stabilization_threshold: null
+-    collision_props: null
+-    activate_contact_sensors: true
+-    scale: null
+-    articulation_props:
+-      articulation_enabled: null
+-      enabled_self_collisions: false
+-      solver_position_iteration_count: 4
+-      solver_velocity_iteration_count: 0
+-      sleep_threshold: 0.005
+-      stabilization_threshold: 0.001
+-      fix_root_link: null
+-    fixed_tendons_props: null
+-    spatial_tendons_props: null
+-    joint_drive_props: null
+-    visual_material_path: material
+-    visual_material: null
+-    usd_path: usd/cf2x.usda
+-    variants: null
+-  init_state:
+-    pos: !!python/tuple
+-    - 0.0
+-    - 0.0
+-    - 0.5
+-    rot: !!python/tuple
+-    - 1.0
+-    - 0.0
+-    - 0.0
+-    - 0.0
+-    lin_vel: !!python/tuple
+-    - 0.0
+-    - 0.0
+-    - 0.0
+-    ang_vel: !!python/tuple
+-    - 0.0
+-    - 0.0
+-    - 0.0
+-    joint_pos:
+-      .*: 0.0
+-    joint_vel:
+-      m1_joint: 200.0
+-      m2_joint: -200.0
+-      m3_joint: 200.0
+-      m4_joint: -200.0
+-  collision_group: 0
+-  debug_vis: false
+-  articulation_root_prim_path: null
+-  soft_joint_pos_limit_factor: 1.0
+-  actuators:
+-    dummy:
+-      class_type: isaaclab.actuators.actuator_pd:ImplicitActuator
+-      joint_names_expr:
+-      - .*
+-      effort_limit: null
+-      velocity_limit: null
+-      effort_limit_sim: null
+-      velocity_limit_sim: null
+-      stiffness: 0.0
+-      damping: 0.0
+-      armature: null
+-      friction: null
+-      dynamic_friction: null
+-      viscous_friction: null
+-  actuator_value_resolution_debug_print: false
+-contact_sensor:
+-  class_type: isaaclab.sensors.contact_sensor.contact_sensor:ContactSensor
+-  prim_path: /World/envs/env_.*/Robot/body
+-  update_period: 0.0
+-  history_length: 6
+-  debug_vis: false
+-  track_pose: false
+-  track_contact_points: false
+-  max_contact_data_count_per_prim: 4
+-  track_air_time: false
+-  force_threshold: 0.0
+-  filter_prim_paths_expr: []
+-  visualizer_cfg:
+-    prim_path: /Visuals/ContactSensor
+-    markers:
+-      contact:
+-        func: isaaclab.sim.spawners.shapes.shapes:spawn_sphere
+-        visible: true
+-        semantic_tags: null
+-        copy_from_source: true
+-        mass_props: null
+-        rigid_props: null
+-        collision_props: null
+-        activate_contact_sensors: false
+-        visual_material_path: material
+-        visual_material:
+-          func: isaaclab.sim.spawners.materials.visual_materials:spawn_preview_surface
+-          diffuse_color: !!python/tuple
+-          - 1.0
+-          - 0.0
+-          - 0.0
+-          emissive_color: !!python/tuple
+-          - 0.0
+-          - 0.0
+-          - 0.0
+-          roughness: 0.5
+-          metallic: 0.0
+-          opacity: 1.0
+-        physics_material_path: material
+-        physics_material: null
+-        radius: 0.02
+-      no_contact:
+-        func: isaaclab.sim.spawners.shapes.shapes:spawn_sphere
+-        visible: false
+-        semantic_tags: null
+-        copy_from_source: true
+-        mass_props: null
+-        rigid_props: null
+-        collision_props: null
+-        activate_contact_sensors: false
+-        visual_material_path: material
+-        visual_material:
+-          func: isaaclab.sim.spawners.materials.visual_materials:spawn_preview_surface
+-          diffuse_color: !!python/tuple
+-          - 0.0
+-          - 1.0
+-          - 0.0
+-          emissive_color: !!python/tuple
+-          - 0.0
+-          - 0.0
+-          - 0.0
+-          roughness: 0.5
+-          metallic: 0.0
+-          opacity: 1.0
+-        physics_material_path: material
+-        physics_material: null
+-        radius: 0.02
+-strategy_class: src.isaac_quad_sim2real.tasks.race.config.crazyflie.quadcopter_strategies:DefaultQuadcopterStrategy
+-use_wall: false
+-track_name: complex
+-debug_vis: true
+-sim_rate_hz: 500
+-policy_rate_hz: 50
+-pid_loop_rate_hz: 500
+-pid_loop_decimation: 1
+-terrain:
+-  class_type: isaaclab.terrains.terrain_importer:TerrainImporter
+-  collision_group: -1
+-  prim_path: /World/ground
+-  num_envs: 8192
+-  terrain_type: plane
+-  terrain_generator: null
+-  usd_path: null
+-  env_spacing: 0.0
+-  visual_material:
+-    func: isaaclab.sim.spawners.materials.visual_materials:spawn_preview_surface
+-    diffuse_color: !!python/tuple
+-    - 0.0
+-    - 0.0
+-    - 0.0
+-    emissive_color: !!python/tuple
+-    - 0.0
+-    - 0.0
+-    - 0.0
+-    roughness: 0.5
+-    metallic: 0.0
+-    opacity: 1.0
+-  physics_material:
+-    func: isaaclab.sim.spawners.materials.physics_materials:spawn_rigid_body_material
+-    static_friction: 1.0
+-    dynamic_friction: 1.0
+-    restitution: 0.0
+-    friction_combine_mode: multiply
+-    restitution_combine_mode: multiply
+-    compliant_contact_stiffness: 0.0
+-    compliant_contact_damping: 0.0
+-  max_init_terrain_level: null
+-  debug_vis: false
+-beta: 1.0
+-min_altitude: 0.1
+-max_altitude: 3.0
+-max_time_on_ground: 1.5
+-arm_length: 0.043
+-k_eta: 2.3e-08
+-k_m: 7.8e-10
+-tau_m: 0.005
+-motor_speed_min: 0.0
+-motor_speed_max: 2500.0
+-kp_omega_rp: 250.0
+-ki_omega_rp: 500.0
+-kd_omega_rp: 2.5
+-i_limit_rp: 33.3
+-kp_omega_y: 120.0
+-ki_omega_y: 16.7
+-kd_omega_y: 0.0
+-i_limit_y: 166.7
+-body_rate_scale_xy: 1.7453292519943295
+-body_rate_scale_z: 3.490658503988659
+-is_train: true
+-k_aero_xy: 9.1785e-07
+-k_aero_z: 1.0311e-06
+-max_tilt_thresh: 2.6179938779914944
+-max_n_laps: 3
+-rewards:
+-  progress_goal_reward_scale: 50.0
+-  crash_reward_scale: -1.0
+-  death_cost: -10.0
+-thrust_to_weight: 3.15
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/best_model.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/best_model.pt
+deleted file mode 100644
+index 34a553c..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/best_model.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/events.out.tfevents.1763774352.ip-172-31-2-98.21720.0 b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/events.out.tfevents.1763774352.ip-172-31-2-98.21720.0
+deleted file mode 100644
+index 236dd4c..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/events.out.tfevents.1763774352.ip-172-31-2-98.21720.0 and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/exported/policy.onnx b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/exported/policy.onnx
+deleted file mode 100644
+index 787e4e0..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/exported/policy.onnx and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/exported/policy.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/exported/policy.pt
+deleted file mode 100644
+index d87db6c..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/exported/policy.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/git/ese651_project.diff b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/git/ese651_project.diff
+deleted file mode 100644
+index fa77a3f..0000000
+--- a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/git/ese651_project.diff
++++ /dev/null
+@@ -1,25 +0,0 @@
+---- git status ---
+-On branch main
+-Your branch is up to date with 'origin/main'.
+-
+-Changes not staged for commit:
+-  (use "git add <file>..." to update what will be committed)
+-  (use "git restore <file>..." to discard changes in working directory)
+-	modified:   src/third_parties/rsl_rl_local/rsl_rl/algorithms/ppo.py
+-
+-no changes added to commit (use "git add" and/or "git commit -a") 
+-
+-
+---- git diff ---
+-diff --git a/src/third_parties/rsl_rl_local/rsl_rl/algorithms/ppo.py b/src/third_parties/rsl_rl_local/rsl_rl/algorithms/ppo.py
+-index 915c20d..148556c 100644
+---- a/src/third_parties/rsl_rl_local/rsl_rl/algorithms/ppo.py
+-+++ b/src/third_parties/rsl_rl_local/rsl_rl/algorithms/ppo.py
+-@@ -4,7 +4,6 @@
+- # SPDX-License-Identifier: BSD-3-Clause
+- 
+- from __future__ import annotations
+--
+- import torch
+- import torch.nn as nn
+- import torch.optim as optim
+\ No newline at end of file
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_0_284.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_0_284.pt
+deleted file mode 100644
+index 4f0c964..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_0_284.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_100_2787.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_100_2787.pt
+deleted file mode 100644
+index fbbd44c..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_100_2787.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_150_3021.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_150_3021.pt
+deleted file mode 100644
+index 2ba89eb..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_150_3021.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_200_3628.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_200_3628.pt
+deleted file mode 100644
+index 0f3b47a..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_200_3628.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_250_6828.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_250_6828.pt
+deleted file mode 100644
+index 62d467c..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_250_6828.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_300_14168.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_300_14168.pt
+deleted file mode 100644
+index dc8a85c..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_300_14168.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_350_19508.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_350_19508.pt
+deleted file mode 100644
+index d0a2d35..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_350_19508.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_400_26759.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_400_26759.pt
+deleted file mode 100644
+index b502bd1..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_400_26759.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_450_27493.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_450_27493.pt
+deleted file mode 100644
+index a91a615..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_450_27493.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_500_33397.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_500_33397.pt
+deleted file mode 100644
+index bbaa5fc..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_500_33397.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_50_1399.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_50_1399.pt
+deleted file mode 100644
+index 8efdb2f..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_50_1399.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_550_39597.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_550_39597.pt
+deleted file mode 100644
+index 87a5a0e..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_550_39597.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_600_54555.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_600_54555.pt
+deleted file mode 100644
+index ae4db2d..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_600_54555.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_650_64354.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_650_64354.pt
+deleted file mode 100644
+index 55e7467..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_650_64354.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_700_60118.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_700_60118.pt
+deleted file mode 100644
+index 43af825..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_700_60118.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_750_1294.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_750_1294.pt
+deleted file mode 100644
+index e03f1e5..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_750_1294.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_800_9354.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_800_9354.pt
+deleted file mode 100644
+index 22ed327..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_800_9354.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_850_60088.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_850_60088.pt
+deleted file mode 100644
+index 7c5e82b..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_850_60088.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_900_825.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_900_825.pt
+deleted file mode 100644
+index 58aa6e3..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_900_825.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_950_817.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_950_817.pt
+deleted file mode 100644
+index 0db2f1d..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_950_817.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_999_811.pt b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_999_811.pt
+deleted file mode 100644
+index 05dc500..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/model_999_811.pt and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/agent.pkl b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/agent.pkl
+deleted file mode 100644
+index 4826943..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/agent.pkl and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/agent.yaml b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/agent.yaml
+deleted file mode 100644
+index e4ccc5b..0000000
+--- a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/agent.yaml
++++ /dev/null
+@@ -1,41 +0,0 @@
+-seed: 42
+-device: cuda:0
+-num_steps_per_env: 24
+-max_iterations: 1000
+-empirical_normalization: false
+-policy:
+-  class_name: ActorCritic
+-  init_noise_std: 1.0
+-  actor_hidden_dims:
+-  - 128
+-  - 128
+-  critic_hidden_dims:
+-  - 512
+-  - 256
+-  - 128
+-  - 128
+-  activation: elu
+-  min_std: 0.0
+-algorithm:
+-  class_name: PPO
+-  value_loss_coef: 1.0
+-  use_clipped_value_loss: true
+-  clip_param: 0.2
+-  entropy_coef: 0.0
+-  num_learning_epochs: 5
+-  num_mini_batches: 4
+-  learning_rate: 0.0005
+-  schedule: adaptive
+-  gamma: 0.99
+-  lam: 0.95
+-  desired_kl: 0.01
+-  max_grad_norm: 1.0
+-save_interval: 50
+-experiment_name: quadcopter_direct
+-run_name: ''
+-logger: wandb
+-neptune_project: isaaclab
+-wandb_project: ese651_quadcopter
+-resume: false
+-load_run: .*
+-load_checkpoint: model_.*.pt
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/env.pkl b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/env.pkl
+deleted file mode 100644
+index a61ee0e..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/env.pkl and /dev/null differ
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/env.yaml b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/env.yaml
+deleted file mode 100644
+index 64724c7..0000000
+--- a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/params/env.yaml
++++ /dev/null
+@@ -1,331 +0,0 @@
+-viewer:
+-  eye: !!python/tuple
+-  - 7.5
+-  - 7.5
+-  - 7.5
+-  lookat: !!python/tuple
+-  - 0.0
+-  - 0.0
+-  - 0.0
+-  cam_prim_path: /OmniverseKit_Persp
+-  resolution: !!python/tuple
+-  - 1280
+-  - 720
+-  origin_type: world
+-  env_index: 0
+-  asset_name: null
+-  body_name: null
+-sim:
+-  physics_prim_path: /physicsScene
+-  device: cuda:0
+-  dt: 0.002
+-  render_interval: 10
+-  gravity: !!python/tuple
+-  - 0.0
+-  - 0.0
+-  - -9.81
+-  enable_scene_query_support: false
+-  use_fabric: true
+-  physx:
+-    solver_type: 1
+-    min_position_iteration_count: 1
+-    max_position_iteration_count: 255
+-    min_velocity_iteration_count: 0
+-    max_velocity_iteration_count: 255
+-    enable_ccd: false
+-    enable_stabilization: false
+-    enable_enhanced_determinism: false
+-    bounce_threshold_velocity: 0.5
+-    friction_offset_threshold: 0.04
+-    friction_correlation_distance: 0.025
+-    gpu_max_rigid_contact_count: 8388608
+-    gpu_max_rigid_patch_count: 163840
+-    gpu_found_lost_pairs_capacity: 2097152
+-    gpu_found_lost_aggregate_pairs_capacity: 33554432
+-    gpu_total_aggregate_pairs_capacity: 2097152
+-    gpu_collision_stack_size: 67108864
+-    gpu_heap_capacity: 67108864
+-    gpu_temp_buffer_capacity: 16777216
+-    gpu_max_num_partitions: 8
+-    gpu_max_soft_body_contacts: 1048576
+-    gpu_max_particle_contacts: 1048576
+-  physics_material:
+-    func: isaaclab.sim.spawners.materials.physics_materials:spawn_rigid_body_material
+-    static_friction: 1.0
+-    dynamic_friction: 1.0
+-    restitution: 0.0
+-    friction_combine_mode: multiply
+-    restitution_combine_mode: multiply
+-    compliant_contact_stiffness: 0.0
+-    compliant_contact_damping: 0.0
+-  render:
+-    enable_translucency: null
+-    enable_reflections: null
+-    enable_global_illumination: null
+-    antialiasing_mode: null
+-    enable_dlssg: null
+-    enable_dl_denoiser: null
+-    dlss_mode: null
+-    enable_direct_lighting: null
+-    samples_per_pixel: null
+-    enable_shadows: null
+-    enable_ambient_occlusion: null
+-    carb_settings: null
+-    rendering_mode: null
+-  create_stage_in_memory: false
+-ui_window_class_type: src.isaac_quad_sim2real.tasks.race.config.crazyflie.quadcopter_env:QuadcopterEnvWindow
+-seed: 42
+-decimation: 10
+-is_finite_horizon: false
+-episode_length_s: 30.0
+-scene:
+-  num_envs: 8192
+-  env_spacing: 0.0
+-  lazy_sensor_update: true
+-  replicate_physics: true
+-  filter_collisions: true
+-  clone_in_fabric: false
+-events: null
+-observation_space: 1
+-num_observations: null
+-state_space: 0
+-num_states: null
+-observation_noise_model: null
+-action_space: 4
+-num_actions: null
+-action_noise_model: null
+-rerender_on_reset: false
+-wait_for_textures: true
+-xr: null
+-log_dir: null
+-gate_model:
+-  usd_path: ./usd/gate.usda
+-  prim_name: gate
+-  gate_side: 1.0
+-robot:
+-  class_type: isaaclab.assets.articulation.articulation:Articulation
+-  prim_path: /World/envs/env_.*/Robot
+-  spawn:
+-    func: isaaclab.sim.spawners.from_files.from_files:spawn_from_usd
+-    visible: true
+-    semantic_tags: null
+-    copy_from_source: false
+-    mass_props: null
+-    deformable_props: null
+-    rigid_props:
+-      rigid_body_enabled: null
+-      kinematic_enabled: null
+-      disable_gravity: false
+-      linear_damping: null
+-      angular_damping: null
+-      max_linear_velocity: null
+-      max_angular_velocity: null
+-      max_depenetration_velocity: 10.0
+-      max_contact_impulse: null
+-      enable_gyroscopic_forces: true
+-      retain_accelerations: null
+-      solver_position_iteration_count: null
+-      solver_velocity_iteration_count: null
+-      sleep_threshold: null
+-      stabilization_threshold: null
+-    collision_props: null
+-    activate_contact_sensors: true
+-    scale: null
+-    articulation_props:
+-      articulation_enabled: null
+-      enabled_self_collisions: false
+-      solver_position_iteration_count: 4
+-      solver_velocity_iteration_count: 0
+-      sleep_threshold: 0.005
+-      stabilization_threshold: 0.001
+-      fix_root_link: null
+-    fixed_tendons_props: null
+-    spatial_tendons_props: null
+-    joint_drive_props: null
+-    visual_material_path: material
+-    visual_material: null
+-    usd_path: usd/cf2x.usda
+-    variants: null
+-  init_state:
+-    pos: !!python/tuple
+-    - 0.0
+-    - 0.0
+-    - 0.5
+-    rot: !!python/tuple
+-    - 1.0
+-    - 0.0
+-    - 0.0
+-    - 0.0
+-    lin_vel: !!python/tuple
+-    - 0.0
+-    - 0.0
+-    - 0.0
+-    ang_vel: !!python/tuple
+-    - 0.0
+-    - 0.0
+-    - 0.0
+-    joint_pos:
+-      .*: 0.0
+-    joint_vel:
+-      m1_joint: 200.0
+-      m2_joint: -200.0
+-      m3_joint: 200.0
+-      m4_joint: -200.0
+-  collision_group: 0
+-  debug_vis: false
+-  articulation_root_prim_path: null
+-  soft_joint_pos_limit_factor: 1.0
+-  actuators:
+-    dummy:
+-      class_type: isaaclab.actuators.actuator_pd:ImplicitActuator
+-      joint_names_expr:
+-      - .*
+-      effort_limit: null
+-      velocity_limit: null
+-      effort_limit_sim: null
+-      velocity_limit_sim: null
+-      stiffness: 0.0
+-      damping: 0.0
+-      armature: null
+-      friction: null
+-      dynamic_friction: null
+-      viscous_friction: null
+-  actuator_value_resolution_debug_print: false
+-contact_sensor:
+-  class_type: isaaclab.sensors.contact_sensor.contact_sensor:ContactSensor
+-  prim_path: /World/envs/env_.*/Robot/body
+-  update_period: 0.0
+-  history_length: 6
+-  debug_vis: false
+-  track_pose: false
+-  track_contact_points: false
+-  max_contact_data_count_per_prim: 4
+-  track_air_time: false
+-  force_threshold: 0.0
+-  filter_prim_paths_expr: []
+-  visualizer_cfg:
+-    prim_path: /Visuals/ContactSensor
+-    markers:
+-      contact:
+-        func: isaaclab.sim.spawners.shapes.shapes:spawn_sphere
+-        visible: true
+-        semantic_tags: null
+-        copy_from_source: true
+-        mass_props: null
+-        rigid_props: null
+-        collision_props: null
+-        activate_contact_sensors: false
+-        visual_material_path: material
+-        visual_material:
+-          func: isaaclab.sim.spawners.materials.visual_materials:spawn_preview_surface
+-          diffuse_color: !!python/tuple
+-          - 1.0
+-          - 0.0
+-          - 0.0
+-          emissive_color: !!python/tuple
+-          - 0.0
+-          - 0.0
+-          - 0.0
+-          roughness: 0.5
+-          metallic: 0.0
+-          opacity: 1.0
+-        physics_material_path: material
+-        physics_material: null
+-        radius: 0.02
+-      no_contact:
+-        func: isaaclab.sim.spawners.shapes.shapes:spawn_sphere
+-        visible: false
+-        semantic_tags: null
+-        copy_from_source: true
+-        mass_props: null
+-        rigid_props: null
+-        collision_props: null
+-        activate_contact_sensors: false
+-        visual_material_path: material
+-        visual_material:
+-          func: isaaclab.sim.spawners.materials.visual_materials:spawn_preview_surface
+-          diffuse_color: !!python/tuple
+-          - 0.0
+-          - 1.0
+-          - 0.0
+-          emissive_color: !!python/tuple
+-          - 0.0
+-          - 0.0
+-          - 0.0
+-          roughness: 0.5
+-          metallic: 0.0
+-          opacity: 1.0
+-        physics_material_path: material
+-        physics_material: null
+-        radius: 0.02
+-strategy_class: src.isaac_quad_sim2real.tasks.race.config.crazyflie.quadcopter_strategies:DefaultQuadcopterStrategy
+-use_wall: false
+-track_name: complex
+-debug_vis: true
+-sim_rate_hz: 500
+-policy_rate_hz: 50
+-pid_loop_rate_hz: 500
+-pid_loop_decimation: 1
+-terrain:
+-  class_type: isaaclab.terrains.terrain_importer:TerrainImporter
+-  collision_group: -1
+-  prim_path: /World/ground
+-  num_envs: 8192
+-  terrain_type: plane
+-  terrain_generator: null
+-  usd_path: null
+-  env_spacing: 0.0
+-  visual_material:
+-    func: isaaclab.sim.spawners.materials.visual_materials:spawn_preview_surface
+-    diffuse_color: !!python/tuple
+-    - 0.0
+-    - 0.0
+-    - 0.0
+-    emissive_color: !!python/tuple
+-    - 0.0
+-    - 0.0
+-    - 0.0
+-    roughness: 0.5
+-    metallic: 0.0
+-    opacity: 1.0
+-  physics_material:
+-    func: isaaclab.sim.spawners.materials.physics_materials:spawn_rigid_body_material
+-    static_friction: 1.0
+-    dynamic_friction: 1.0
+-    restitution: 0.0
+-    friction_combine_mode: multiply
+-    restitution_combine_mode: multiply
+-    compliant_contact_stiffness: 0.0
+-    compliant_contact_damping: 0.0
+-  max_init_terrain_level: null
+-  debug_vis: false
+-beta: 1.0
+-min_altitude: 0.1
+-max_altitude: 3.0
+-max_time_on_ground: 1.5
+-arm_length: 0.043
+-k_eta: 2.3e-08
+-k_m: 7.8e-10
+-tau_m: 0.005
+-motor_speed_min: 0.0
+-motor_speed_max: 2500.0
+-kp_omega_rp: 250.0
+-ki_omega_rp: 500.0
+-kd_omega_rp: 2.5
+-i_limit_rp: 33.3
+-kp_omega_y: 120.0
+-ki_omega_y: 16.7
+-kd_omega_y: 0.0
+-i_limit_y: 166.7
+-body_rate_scale_xy: 1.7453292519943295
+-body_rate_scale_z: 3.490658503988659
+-is_train: true
+-k_aero_xy: 9.1785e-07
+-k_aero_z: 1.0311e-06
+-max_tilt_thresh: 2.6179938779914944
+-max_n_laps: 3
+-rewards:
+-  progress_goal_reward_scale: 50.0
+-  crash_reward_scale: -1.0
+-  death_cost: -10.0
+-thrust_to_weight: 3.15
+diff --git a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/videos/play/rl-video-step-0.mp4 b/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/videos/play/rl-video-step-0.mp4
+deleted file mode 100644
+index cdabcdd..0000000
+Binary files a/logs/rsl_rl/quadcopter_direct/2025-11-22_01-18-56/videos/play/rl-video-step-0.mp4 and /dev/null differ
+diff --git a/scripts/rsl_rl/play_race.py b/scripts/rsl_rl/play_race.py
+index 9122df8..f21fbd5 100644
+--- a/scripts/rsl_rl/play_race.py
++++ b/scripts/rsl_rl/play_race.py
+@@ -26,10 +26,10 @@ import cli_args  # isort: skip
+ # add argparse arguments
+ parser = argparse.ArgumentParser(description="Train an RL agent with RSL-RL.")
+ parser.add_argument("--video", action="store_true", default=False, help="Record videos during training.")
+-parser.add_argument("--video_length", type=int, default=2500, help="Length of the recorded video (in steps).")
++parser.add_argument("--video_length", type=int, default=800, help="Length of the recorded video (in steps).")
+ parser.add_argument("--disable_fabric", action="store_true", default=False, help="Disable fabric and use USD I/O operations.")
+-parser.add_argument("--num_envs", type=int, default=None, help="Number of environments to simulate.")
+-parser.add_argument("--task", type=str, default=None, help="Name of the task.")
++parser.add_argument("--num_envs", type=int, default=1, help="Number of environments to simulate.")
++parser.add_argument("--task", type=str, default="Isaac-Quadcopter-Race-v0", help="Name of the task.")
+ parser.add_argument("--follow_robot", type=int, default=-1, help="Follow robot index.")
+ parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility.")
+ 
+@@ -39,6 +39,20 @@ cli_args.add_rsl_rl_args(parser)
+ AppLauncher.add_app_launcher_args(parser)
+ args_cli = parser.parse_args()
+ 
++# Set defaults for convenience
++if args_cli.checkpoint is None:
++    args_cli.checkpoint = "best_model.pt"
++if not hasattr(args_cli, 'headless') or args_cli.headless is None:
++    args_cli.headless = True
++# Set video to True by default (if not explicitly set via --video flag)
++# Note: with action="store_true", False means flag wasn't passed, True means it was
++# Since we want True by default, we always set it to True here
++args_cli.video = True
++
++# Validate that load_run is provided (it's the only required argument)
++if args_cli.load_run is None:
++    parser.error("--load_run is required. Please provide the run folder name to load from.")
++
+ # always enable cameras to record video
+ if args_cli.video:
+     args_cli.enable_cameras = True
+diff --git a/scripts/rsl_rl/train_race.py b/scripts/rsl_rl/train_race.py
+index f420fc9..ba63877 100644
+--- a/scripts/rsl_rl/train_race.py
++++ b/scripts/rsl_rl/train_race.py
+@@ -106,14 +106,29 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
+     log_dir = os.path.join(log_root_path, log_dir)
+ 
+     # TODO ----- START ----- Define rewards scales
+-    # reward scales
+-    progress_goal_reward_scale = 50.0
+-    crash_reward = -1.0
+-    death_cost = -10.0
++    # reward scales - Focus ONLY on gate completion
++    # reward scales - Focus on dense progress and alignment
++    gate_pass_reward_scale = 2000.0         # HUGE reward for passing through gates
++    progress_reward_scale = 100.0           # Dense reward for moving towards target
++    distance_reward_scale = 10.0            # Reward for being close to target
++    centering_reward_scale = 20.0           # Reward for being centered in gate
++    alignment_reward_scale = 5.0            # Reward for pointing towards target
++    velocity_reward_scale = 0.0             # Disable direct reward for speed (focus on gates)
++    crash_reward_scale = -100.0             # Penalty for crashing
++    low_altitude_penalty_scale = -10.0      # Penalty for flying too low
++    ang_vel_penalty_scale = -0.1            # Small penalty for smoothness
++    death_cost = -100.0                     # Penalty for episode termination
+ 
+     rewards = {
+-        'progress_goal_reward_scale': progress_goal_reward_scale,
+-        'crash_reward_scale': crash_reward,
++        'gate_pass_reward_scale': gate_pass_reward_scale,
++        'progress_reward_scale': progress_reward_scale,
++        'distance_reward_scale': distance_reward_scale,
++        'centering_reward_scale': centering_reward_scale,
++        'alignment_reward_scale': alignment_reward_scale,
++        'velocity_reward_scale': velocity_reward_scale,
++        'crash_reward_scale': crash_reward_scale,
++        'low_altitude_penalty_scale': low_altitude_penalty_scale,
++        'ang_vel_penalty_scale': ang_vel_penalty_scale,
+         'death_cost': death_cost,
+     }
+     # TODO ----- END -----
+diff --git a/src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py b/src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py
+index 0b453c0..857744f 100644
+--- a/src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py
++++ b/src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py
+@@ -36,7 +36,12 @@ class DefaultQuadcopterStrategy:
+ 
+         # Initialize episode sums for logging if in training mode
+         if self.cfg.is_train and hasattr(env, 'rew'):
+-            keys = [key.split("_reward_scale")[0] for key in env.rew.keys() if key != "death_cost"]
++            keys = []
++            for key in env.rew.keys():
++                if key != "death_cost":
++                    # Remove common suffixes to get the base reward name
++                    base_key = key.replace("_reward_scale", "").replace("_penalty_scale", "")
++                    keys.append(base_key)
+             self._episode_sums = {
+                 key: torch.zeros(self.num_envs, dtype=torch.float, device=self.device)
+                 for key in keys
+@@ -67,38 +72,131 @@ class DefaultQuadcopterStrategy:
+ 
+     def get_rewards(self) -> torch.Tensor:
+         """get_rewards() is called per timestep. This is where you define your reward structure and compute them
+-        according to the reward scales you tune in train_race.py. The following is an example reward structure that
+-        causes the drone to hover near the zeroth gate. It will not produce a racing policy, but simply serves as proof
+-        if your PPO implementation works. You should delete it or heavily modify it once you begin the racing task."""
+-
+-        # TODO ----- START ----- Define the tensors required for your custom reward structure
+-        # check to change waypoint
+-        dist_to_gate = torch.linalg.norm(self.env._pose_drone_wrt_gate, dim=1)
+-        gate_passed = dist_to_gate < 0.1
+-        ids_gate_passed = torch.where(gate_passed)[0]
+-        self.env._idx_wp[ids_gate_passed] = (self.env._idx_wp[ids_gate_passed] + 1) % self.env._waypoints.shape[0]
+-
+-        # set desired positions in the world frame
+-        self.env._desired_pos_w[ids_gate_passed, :2] = self.env._waypoints[self.env._idx_wp[ids_gate_passed], :2]
+-        self.env._desired_pos_w[ids_gate_passed, 2] = self.env._waypoints[self.env._idx_wp[ids_gate_passed], 2]
+-
+-        # calculate progress via distance to goal
+-        distance_to_goal = torch.linalg.norm(self.env._desired_pos_w - self.env._robot.data.root_link_pos_w, dim=1)
+-        distance_to_goal = torch.tanh(distance_to_goal/3.0)
+-        progress = 1 - distance_to_goal  # distance_to_goal is between 0 and 1 where 0 means the drone reached the goal
++        according to the reward scales you tune in train_race.py."""
++
++        # Recalculate pose relative to current target gate
++        drone_pose = self.env._robot.data.root_link_state_w[:, :3]
++        self.env._pose_drone_wrt_gate, _ = subtract_frame_transforms(
++            self.env._waypoints[self.env._idx_wp, :3],
++            self.env._waypoints_quat[self.env._idx_wp, :],
++            drone_pose
++        )
+ 
+-        # compute crashed environments if contact detected for 100 timesteps
++        # Target position: 2.0m beyond the gate center (negative X because we fly +X -> -X)
++        target_pos_gate_frame = torch.tensor([-2.0, 0.0, 0.0], device=self.device).expand(self.num_envs, 3)
++        
++        # Current distance to target
++        dist_to_target = torch.norm(self.env._pose_drone_wrt_gate - target_pos_gate_frame, dim=1)
++        
++        # Initialize prev_dist if not exists (handle first step)
++        if not hasattr(self.env, '_prev_dist_to_target'):
++            self.env._prev_dist_to_target = dist_to_target.clone()
++
++        # 1. Progress Reward: Change in distance to target
++        # Positive if getting closer, negative if moving away
++        progress_reward = (self.env._prev_dist_to_target - dist_to_target)
++        
++        # Update previous distance
++        self.env._prev_dist_to_target = dist_to_target.clone()
++
++        # 2. Distance Reward: Exponential penalty for being far from target
++        distance_reward = torch.exp(-0.5 * dist_to_target)
++
++        # 2.5 Centering Reward: Stronger penalty for lateral/vertical deviation from gate axis
++        # y and z in gate frame
++        y_gate = self.env._pose_drone_wrt_gate[:, 1]
++        z_gate = self.env._pose_drone_wrt_gate[:, 2]
++        dist_from_center = torch.sqrt(y_gate**2 + z_gate**2)
++        centering_reward = torch.exp(-2.0 * dist_from_center)
++
++        # 3. Gate Pass Reward
++        # Detect gate crossing: x crosses from negative to positive (behind -> in front)
++        current_x = self.env._pose_drone_wrt_gate[:, 0]
++        prev_x = self.env._prev_x_drone_wrt_gate
++        
++        gate_size = self.env._gate_model_cfg_data.gate_side
++        within_gate_y = torch.abs(self.env._pose_drone_wrt_gate[:, 1]) < gate_size / 2.0
++        within_gate_z = torch.abs(self.env._pose_drone_wrt_gate[:, 2]) < gate_size / 2.0
++        within_gate_bounds = within_gate_y & within_gate_z
++        
++        crossed_plane = (prev_x > 0) & (current_x <= 0)
++        gate_passed = crossed_plane & within_gate_bounds
++        
++        gate_pass_reward = gate_passed.float()
++        
++        # Update previous x
++        self.env._prev_x_drone_wrt_gate = current_x.clone()
++
++        # Handle gate transition
++        ids_gate_passed = torch.where(gate_passed)[0]
++        if len(ids_gate_passed) > 0:
++            self.env._idx_wp[ids_gate_passed] = (self.env._idx_wp[ids_gate_passed] + 1) % self.env._waypoints.shape[0]
++            self.env._n_gates_passed[ids_gate_passed] += 1
++            
++            # Update desired pos
++            self.env._desired_pos_w[ids_gate_passed, :2] = self.env._waypoints[self.env._idx_wp[ids_gate_passed], :2]
++            self.env._desired_pos_w[ids_gate_passed, 2] = self.env._waypoints[self.env._idx_wp[ids_gate_passed], 2]
++            
++            # Recalculate pose for new gate
++            self.env._pose_drone_wrt_gate[ids_gate_passed], _ = subtract_frame_transforms(
++                self.env._waypoints[self.env._idx_wp[ids_gate_passed], :3],
++                self.env._waypoints_quat[self.env._idx_wp[ids_gate_passed], :],
++                drone_pose[ids_gate_passed]
++            )
++            self.env._prev_x_drone_wrt_gate[ids_gate_passed] = self.env._pose_drone_wrt_gate[ids_gate_passed, 0]
++            
++            # Reset distance tracking for new gate
++            new_dist = torch.norm(self.env._pose_drone_wrt_gate[ids_gate_passed] - target_pos_gate_frame[ids_gate_passed], dim=1)
++            self.env._prev_dist_to_target[ids_gate_passed] = new_dist
++
++        # 4. Alignment Reward
++        # Dot product of drone forward vector and vector to target
++        # Drone forward vector in world frame
++        drone_quat_w = self.env._robot.data.root_quat_w
++        drone_rot_mat = matrix_from_quat(drone_quat_w)
++        drone_forward_w = drone_rot_mat[:, :, 0] # X-axis is forward
++        
++        # Vector to target in world frame
++        target_pos_w = self.env._waypoints[self.env._idx_wp, :3] # Approximate target as gate center for alignment
++        # Better: Transform target_pos_gate_frame to world
++        # But for alignment, pointing to gate center is good enough
++        vec_to_target_w = target_pos_w - drone_pose
++        vec_to_target_w_norm = vec_to_target_w / (torch.norm(vec_to_target_w, dim=1, keepdim=True) + 1e-6)
++        
++        alignment_reward = torch.sum(drone_forward_w * vec_to_target_w_norm, dim=1)
++
++        # 5. Velocity Reward
++        # Project velocity onto vector to target
++        drone_vel_w = self.env._robot.data.root_com_lin_vel_w
++        vel_proj = torch.sum(drone_vel_w * vec_to_target_w_norm, dim=1)
++        velocity_reward = torch.clamp(vel_proj, min=0.0)
++
++        # 6. Penalties
++        # Crash
+         contact_forces = self.env._contact_sensor.data.net_forces_w
+         crashed = (torch.norm(contact_forces, dim=-1) > 1e-8).squeeze(1).int()
+-        mask = (self.env.episode_length_buf > 100).int()
++        mask = (self.env.episode_length_buf > 100).int() # Ignore initial contacts
+         self.env._crashed = self.env._crashed + crashed * mask
+-        # TODO ----- END -----
++        
++        # Low altitude
++        height = self.env._robot.data.root_link_pos_w[:, 2]
++        low_altitude_penalty = torch.clamp(0.2 - height, min=0.0) # Penalize if below 0.2m
++        
++        # Angular velocity penalty (smoothness)
++        ang_vel = self.env._robot.data.root_ang_vel_b
++        ang_vel_penalty = torch.sum(torch.abs(ang_vel), dim=1)
+ 
+         if self.cfg.is_train:
+-            # TODO ----- START ----- Compute per-timestep rewards by multiplying with your reward scales (in train_race.py)
+             rewards = {
+-                "progress_goal": progress * self.env.rew['progress_goal_reward_scale'],
++                "gate_pass": gate_pass_reward * self.env.rew['gate_pass_reward_scale'],
++                "progress": progress_reward * self.env.rew['progress_reward_scale'],
++                "distance": distance_reward * self.env.rew['distance_reward_scale'],
++                "centering": centering_reward * self.env.rew['centering_reward_scale'],
++                "alignment": alignment_reward * self.env.rew['alignment_reward_scale'],
++                "velocity": velocity_reward * self.env.rew['velocity_reward_scale'],
+                 "crash": crashed * self.env.rew['crash_reward_scale'],
++                "low_altitude": low_altitude_penalty * self.env.rew['low_altitude_penalty_scale'],
++                "ang_vel": ang_vel_penalty * self.env.rew['ang_vel_penalty_scale'],
+             }
+             reward = torch.sum(torch.stack(list(rewards.values())), dim=0)
+             reward = torch.where(self.env.reset_terminated,
+@@ -107,58 +205,71 @@ class DefaultQuadcopterStrategy:
+             # Logging
+             for key, value in rewards.items():
+                 self._episode_sums[key] += value
+-        else:   # This else condition implies eval is called with play_race.py. Can be useful to debug at test-time
++        else:
+             reward = torch.zeros(self.num_envs, device=self.device)
+-            # TODO ----- END -----
+ 
+         return reward
+ 
+     def get_observations(self) -> Dict[str, torch.Tensor]:
+-        """Get observations. Read reset_idx() and quadcopter_env.py to see which drone info is extracted from the sim.
+-        The following code is an example. You should delete it or heavily modify it once you begin the racing task."""
++        """Get observations."""
+ 
+-        # TODO ----- START ----- Define tensors for your observation space. Be careful with frame transformations
+-        #### Basic drone states, modify for your needs)
+-        drone_pose_w = self.env._robot.data.root_link_pos_w
++        # Basic drone states in body frame
+         drone_lin_vel_b = self.env._robot.data.root_com_lin_vel_b
++        drone_ang_vel_b = self.env._robot.data.root_ang_vel_b
++        
++        # Orientation: Rotation matrix (flattened) to avoid Euler singularities
+         drone_quat_w = self.env._robot.data.root_quat_w
+-
+-        ##### Some example observations you may want to explore using
+-        # Angular velocities (referred to as body rates)
+-        # drone_ang_vel_b = self.env._robot.data.root_ang_vel_b  # [roll_rate, pitch_rate, yaw_rate]
+-
+-        # Current target gate information
+-        # current_gate_idx = self.env._idx_wp
+-        # current_gate_pos_w = self.env._waypoints[current_gate_idx, :3]  # World position of current gate
+-        # current_gate_yaw = self.env._waypoints[current_gate_idx, -1]    # Yaw orientation of current gate
+-
+-        # Relative position to current gate in gate frame
++        drone_rot_mat = matrix_from_quat(drone_quat_w).reshape(self.num_envs, 9)
++        
++        # Relative position to gate in gate frame
+         drone_pos_gate_frame = self.env._pose_drone_wrt_gate
+-
+-        # Relative position to current gate in body frame
+-        # gate_pos_b, _ = subtract_frame_transforms(
+-        #     self.env._robot.data.root_link_pos_w,
+-        #     self.env._robot.data.root_quat_w,
+-        #     current_gate_pos_w
+-        # )
+-
++        
++        # Relative velocity in gate frame
++        current_gate_idx = self.env._idx_wp
++        current_gate_quat = self.env._waypoints_quat[current_gate_idx, :]
++        rotation_matrices = matrix_from_quat(current_gate_quat)
++        drone_vel_w = self.env._robot.data.root_com_lin_vel_w
++        drone_vel_gate_frame = torch.bmm(
++            rotation_matrices.transpose(1, 2),
++            drone_vel_w.unsqueeze(-1)
++        ).squeeze(-1)
++        
++        # Next gate relative position
++        next_gate_idx = (current_gate_idx + 1) % self.env._waypoints.shape[0]
++        next_gate_pos_w = self.env._waypoints[next_gate_idx, :3]
++        
++        next_gate_rel_pos, _ = subtract_frame_transforms(
++            self.env._waypoints[current_gate_idx, :3],
++            current_gate_quat,
++            next_gate_pos_w
++        )
++        
+         # Previous actions
+-        # prev_actions = self.env._previous_actions  # Shape: (num_envs, 4)
+-
+-        # Number of gates passed
+-        # gates_passed = self.env._n_gates_passed.unsqueeze(1).float()
+-
+-        # TODO ----- END -----
+-
++        prev_actions = self.env._previous_actions
++        
++        # Vector to next gate in body frame (Crucial for anticipation)
++        # next_gate_pos_w is already calculated
++        drone_pos_w = self.env._robot.data.root_link_pos_w
++        vec_to_next_gate_w = next_gate_pos_w - drone_pos_w
++        
++        # Rotate to body frame (need 3x3 matrices here, keep separate from flattened version)
++        drone_rot_mat_3d = matrix_from_quat(drone_quat_w)
++        vec_to_next_gate_b = torch.bmm(
++            drone_rot_mat_3d.transpose(1, 2),
++            vec_to_next_gate_w.unsqueeze(-1)
++        ).squeeze(-1)
++        
+         obs = torch.cat(
+-            # TODO ----- START ----- List your observation tensors here to be concatenated together
+             [
+-                drone_pose_w,       # position in the world frame (3 dims)
+-                drone_lin_vel_b,    # velocity in the body frame (3 dims)
+-                drone_quat_w,       # quaternion in the world frame (4 dims)
+-                drone_pos_gate_frame
++                drone_lin_vel_b,           # (3)
++                drone_ang_vel_b,           # (3)
++                drone_rot_mat,             # (9)
++                drone_pos_gate_frame,      # (3)
++                drone_vel_gate_frame,      # (3)
++                next_gate_rel_pos,         # (3)
++                vec_to_next_gate_b,        # (3) [NEW]
++                prev_actions,              # (4)
+             ],
+-            # TODO ----- END -----
+             dim=-1,
+         )
+         observations = {"policy": obs}
+@@ -220,83 +331,98 @@ class DefaultQuadcopterStrategy:
+ 
+         default_root_state = self.env._robot.data.default_root_state[env_ids]
+ 
+-        # TODO ----- START ----- Define the initial state during training after resetting an environment.
+-        # This example code initializes the drone 2m behind the first gate. You should delete it or heavily
+-        # modify it once you begin the racing task.
+-
+-        # start from the zeroth waypoint (beginning of the race)
+-        waypoint_indices = torch.zeros(n_reset, device=self.device, dtype=self.env._idx_wp.dtype)
++        # Initialize drone states
++        num_waypoints = self.env._waypoints.shape[0]
++        
++        # Curriculum: Start from random gates
++        # 50% chance to start from gate 0, 50% random gate
++        random_start_mask = torch.rand(n_reset, device=self.device) < 0.5
++        random_waypoint_indices = torch.randint(0, num_waypoints, (n_reset,), device=self.device, dtype=self.env._idx_wp.dtype)
++        waypoint_indices = torch.where(random_start_mask, random_waypoint_indices, torch.zeros(n_reset, device=self.device, dtype=self.env._idx_wp.dtype))
+ 
+-        # get starting poses behind waypoints
++        # Get gate poses
+         x0_wp = self.env._waypoints[waypoint_indices][:, 0]
+         y0_wp = self.env._waypoints[waypoint_indices][:, 1]
+-        theta = self.env._waypoints[waypoint_indices][:, -1]
+         z_wp = self.env._waypoints[waypoint_indices][:, 2]
++        theta = self.env._waypoints[waypoint_indices][:, -1]
+ 
+-        x_local = -2.0 * torch.ones(n_reset, device=self.device)
+-        y_local = torch.zeros(n_reset, device=self.device)
+-        z_local = torch.zeros(n_reset, device=self.device)
++        # Randomize position behind gate (Cone/Box)
++        # x: -1.5m to -2.5m behind gate
++        x_local = torch.empty(n_reset, device=self.device).uniform_(-2.5, -1.5)
++        # y: +/- 0.5m lateral
++        y_local = torch.empty(n_reset, device=self.device).uniform_(-0.5, 0.5)
++        # z: +/- 0.25m vertical
++        z_local = torch.empty(n_reset, device=self.device).uniform_(-0.25, 0.25)
+ 
+-        # rotate local pos to global frame
++        # Rotate to world frame
+         cos_theta = torch.cos(theta)
+         sin_theta = torch.sin(theta)
+         x_rot = cos_theta * x_local - sin_theta * y_local
+         y_rot = sin_theta * x_local + cos_theta * y_local
+-        initial_x = x0_wp - x_rot
++        
++        initial_x = x0_wp - x_rot # Invert direction based on user feedback
+         initial_y = y0_wp - y_rot
+-        initial_z = z_local + z_wp
++        initial_z = torch.clamp(z_wp + z_local, min=0.5) # Increase min altitude
+ 
+         default_root_state[:, 0] = initial_x
+         default_root_state[:, 1] = initial_y
+         default_root_state[:, 2] = initial_z
+ 
+-        # point drone towards the zeroth gate
++        # Orientation: Point towards gate with noise
+         initial_yaw = torch.atan2(y0_wp - initial_y, x0_wp - initial_x)
+-        quat = quat_from_euler_xyz(
+-            torch.zeros(1, device=self.device),
+-            torch.zeros(1, device=self.device),
+-            initial_yaw + torch.empty(1, device=self.device).uniform_(-0.15, 0.15)
+-        )
++        yaw_noise = torch.empty(n_reset, device=self.device).uniform_(-0.3, 0.3) # +/- ~17 deg
++        roll_noise = torch.empty(n_reset, device=self.device).uniform_(-0.1, 0.1)
++        pitch_noise = torch.empty(n_reset, device=self.device).uniform_(-0.1, 0.1)
++        
++        quat = quat_from_euler_xyz(roll_noise, pitch_noise, initial_yaw + yaw_noise)
+         default_root_state[:, 3:7] = quat
+-        # TODO ----- END -----
+ 
+-        # Handle play mode initial position
++        # Initial velocity: Small forward velocity (avoid blasting too fast)
++        # 0 to 0.5 m/s forward
++        speed = torch.empty(n_reset, device=self.device).uniform_(0.0, 0.5)
++        vel_x_local = speed
++        vel_y_local = torch.empty(n_reset, device=self.device).uniform_(-0.5, 0.5)
++        vel_z_local = torch.empty(n_reset, device=self.device).uniform_(-0.5, 0.5)
++        
++        # Rotate velocity to world
++        vel_x_w = cos_theta * vel_x_local - sin_theta * vel_y_local
++        vel_y_w = sin_theta * vel_x_local + cos_theta * vel_y_local
++        
++        default_root_state[:, 7] = vel_x_w
++        default_root_state[:, 8] = vel_y_w
++        default_root_state[:, 9] = vel_z_local
++
++        # Handle play mode (eval)
+         if not self.cfg.is_train:
+-            # x_local and y_local are randomly sampled
+-            x_local = torch.empty(1, device=self.device).uniform_(-3.0, -0.5)
+-            y_local = torch.empty(1, device=self.device).uniform_(-1.0, 1.0)
+-
+-            x0_wp = self.env._waypoints[self.env._initial_wp, 0]
+-            y0_wp = self.env._waypoints[self.env._initial_wp, 1]
+-            theta = self.env._waypoints[self.env._initial_wp, -1]
+-
+-            # rotate local pos to global frame
+-            cos_theta, sin_theta = torch.cos(theta), torch.sin(theta)
+-            x_rot = cos_theta * x_local - sin_theta * y_local
+-            y_rot = sin_theta * x_local + cos_theta * y_local
+-            x0 = x0_wp - x_rot
+-            y0 = y0_wp - y_rot
+-            z0 = 0.05
+-
+-            # point drone towards the zeroth gate
+-            yaw0 = torch.atan2(y0_wp - y0, x0_wp - x0)
+-
+-            default_root_state = self.env._robot.data.default_root_state[0].unsqueeze(0)
+-            default_root_state[:, 0] = x0
+-            default_root_state[:, 1] = y0
+-            default_root_state[:, 2] = z0
+-
+-            quat = quat_from_euler_xyz(
+-                torch.zeros(1, device=self.device),
+-                torch.zeros(1, device=self.device),
+-                yaw0
+-            )
++            # Start at gate 0, 2m behind
++            waypoint_indices = torch.zeros(n_reset, device=self.device, dtype=self.env._idx_wp.dtype)
++            x0_wp = self.env._waypoints[waypoint_indices][:, 0]
++            y0_wp = self.env._waypoints[waypoint_indices][:, 1]
++            z_wp = self.env._waypoints[waypoint_indices][:, 2]
++            theta = self.env._waypoints[waypoint_indices][:, -1]
++            
++            x_local = -2.0
++            y_local = 0.0
++            z_local = 0.0
++            
++            cos_theta = torch.cos(theta)
++            sin_theta = torch.sin(theta)
++            
++            initial_x = x0_wp - (cos_theta * x_local - sin_theta * y_local) # Invert here too
++            initial_y = y0_wp - (sin_theta * x_local + cos_theta * y_local)
++            initial_z = z_wp # Start at gate center height
++            
++            default_root_state[:, 0] = initial_x
++            default_root_state[:, 1] = initial_y
++            default_root_state[:, 2] = initial_z
++            
++            initial_yaw = torch.atan2(y0_wp - initial_y, x0_wp - initial_x)
++            quat = quat_from_euler_xyz(torch.zeros_like(initial_yaw), torch.zeros_like(initial_yaw), initial_yaw)
+             default_root_state[:, 3:7] = quat
+-            waypoint_indices = self.env._initial_wp
++            default_root_state[:, 7:] = 0.0 # Stationary start
+ 
+-        # Set waypoint indices and desired positions
++        # Set waypoint indices
+         self.env._idx_wp[env_ids] = waypoint_indices
+-
+         self.env._desired_pos_w[env_ids, :2] = self.env._waypoints[waypoint_indices, :2].clone()
+         self.env._desired_pos_w[env_ids, 2] = self.env._waypoints[waypoint_indices, 2].clone()
+ 
+@@ -311,13 +437,20 @@ class DefaultQuadcopterStrategy:
+ 
+         # Reset variables
+         self.env._yaw_n_laps[env_ids] = 0
++        self.env._crashed[env_ids] = 0
+ 
++        # Recalculate pose relative to gate
+         self.env._pose_drone_wrt_gate[env_ids], _ = subtract_frame_transforms(
+             self.env._waypoints[self.env._idx_wp[env_ids], :3],
+             self.env._waypoints_quat[self.env._idx_wp[env_ids], :],
+             self.env._robot.data.root_link_state_w[env_ids, :3]
+         )
+-
+-        self.env._prev_x_drone_wrt_gate = torch.ones(self.num_envs, device=self.device)
+-
+-        self.env._crashed[env_ids] = 0
+\ No newline at end of file
++        self.env._prev_x_drone_wrt_gate[env_ids] = self.env._pose_drone_wrt_gate[env_ids, 0]
++        
++        # Initialize prev_dist_to_target for rewards
++        target_pos_gate_frame = torch.tensor([-2.0, 0.0, 0.0], device=self.device).expand(n_reset, 3)
++        dist_to_target = torch.norm(self.env._pose_drone_wrt_gate[env_ids] - target_pos_gate_frame, dim=1)
++        
++        if not hasattr(self.env, '_prev_dist_to_target'):
++             self.env._prev_dist_to_target = torch.zeros(self.num_envs, device=self.device)
++        self.env._prev_dist_to_target[env_ids] = dist_to_target
+\ No newline at end of file
