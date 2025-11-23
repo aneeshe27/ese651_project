@@ -114,6 +114,7 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
     centering_reward_scale = 20.0           # Reward for being centered in gate
     alignment_reward_scale = 10.0           # Increased reward for pointing towards target
     velocity_reward_scale = 0.0             # Disable direct reward for speed (focus on gates)
+    stagnation_penalty_scale = -2.0         # Small penalty for hovering near later gates
     crash_reward_scale = -100.0             # Penalty for crashing
     low_altitude_penalty_scale = -10.0      # Penalty for flying too low
     ang_vel_penalty_scale = -0.1            # Small penalty for smoothness
@@ -126,6 +127,7 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
         'centering_reward_scale': centering_reward_scale,
         'alignment_reward_scale': alignment_reward_scale,
         'velocity_reward_scale': velocity_reward_scale,
+        'stagnation_penalty_scale': stagnation_penalty_scale,
         'crash_reward_scale': crash_reward_scale,
         'low_altitude_penalty_scale': low_altitude_penalty_scale,
         'ang_vel_penalty_scale': ang_vel_penalty_scale,

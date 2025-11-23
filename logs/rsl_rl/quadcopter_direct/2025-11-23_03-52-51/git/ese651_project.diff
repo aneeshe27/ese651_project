@@ -1,0 +1,56 @@
+--- git status ---
+On branch rescue-gates
+Your branch is up to date with 'origin/rescue-gates'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	logs/rsl_rl/quadcopter_direct/2025-11-23_01-23-13/
+	logs/rsl_rl/quadcopter_direct/2025-11-23_01-24-24/
+	logs/rsl_rl/quadcopter_direct/2025-11-23_03-52-51/
+
+no changes added to commit (use "git add" and/or "git commit -a") 
+
+
+--- git diff ---
+diff --git a/src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py b/src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py
+index 857744f..005caa1 100644
+--- a/src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py
++++ b/src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py
+@@ -99,15 +99,18 @@ class DefaultQuadcopterStrategy:
+         # Update previous distance
+         self.env._prev_dist_to_target = dist_to_target.clone()
+ 
+-        # 2. Distance Reward: Exponential penalty for being far from target
+-        distance_reward = torch.exp(-0.5 * dist_to_target)
++        # 2. Distance Reward: zero-mean shaping for being close to target
++        # exp(-k * d) is in (0, 1]; subtract 1 so best case is 0 and far away is negative.
++        # This avoids creating a "reward well" that encourages hovering at the target.
++        distance_reward = torch.exp(-0.5 * dist_to_target) - 1.0
+ 
+         # 2.5 Centering Reward: Stronger penalty for lateral/vertical deviation from gate axis
+         # y and z in gate frame
+         y_gate = self.env._pose_drone_wrt_gate[:, 1]
+         z_gate = self.env._pose_drone_wrt_gate[:, 2]
+         dist_from_center = torch.sqrt(y_gate**2 + z_gate**2)
+-        centering_reward = torch.exp(-2.0 * dist_from_center)
++        # Similar zero-mean shaping: 0 at center, negative when off-centre.
++        centering_reward = torch.exp(-2.0 * dist_from_center) - 1.0
+ 
+         # 3. Gate Pass Reward
+         # Detect gate crossing: x crosses from negative to positive (behind -> in front)
+@@ -164,6 +167,10 @@ class DefaultQuadcopterStrategy:
+         vec_to_target_w_norm = vec_to_target_w / (torch.norm(vec_to_target_w, dim=1, keepdim=True) + 1e-6)
+         
+         alignment_reward = torch.sum(drone_forward_w * vec_to_target_w_norm, dim=1)
++        # Only reward alignment when actually making progress toward the target.
++        # If progress_reward <= 0 (hovering or moving away), this term is zeroed.
++        positive_progress_mask = (progress_reward > 0.0).float()
++        alignment_reward = alignment_reward * positive_progress_mask
+ 
+         # 5. Velocity Reward
+         # Project velocity onto vector to target

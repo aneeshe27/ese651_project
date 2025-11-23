@@ -99,6 +99,14 @@ class DefaultQuadcopterStrategy:
         # Update previous distance
         self.env._prev_dist_to_target = dist_to_target.clone()
 
+        # 1.5 Stagnation penalty: if we are near the target but not making progress
+        # (especially on later gates), add a small penalty to discourage hovering.
+        near_target = dist_to_target < 0.6
+        low_progress = torch.abs(progress_reward) < 1e-3
+        later_gates = self.env._idx_wp >= 4  # only from 5th gate onward
+        stagnation_mask = near_target & low_progress & later_gates
+        stagnation_penalty = stagnation_mask.float()
+
         # 2. Distance Reward: Exponential penalty for being far from target
         distance_reward = torch.exp(-0.5 * dist_to_target)
 
@@ -190,6 +198,7 @@ class DefaultQuadcopterStrategy:
             rewards = {
                 "gate_pass": gate_pass_reward * self.env.rew['gate_pass_reward_scale'],
                 "progress": progress_reward * self.env.rew['progress_reward_scale'],
+                "stagnation": stagnation_penalty * self.env.rew['stagnation_penalty_scale'],
                 "distance": distance_reward * self.env.rew['distance_reward_scale'],
                 "centering": centering_reward * self.env.rew['centering_reward_scale'],
                 "alignment": alignment_reward * self.env.rew['alignment_reward_scale'],

@@ -1,0 +1,68 @@
+--- git status ---
+On branch rescue-gates
+Your branch is up to date with 'origin/rescue-gates'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   scripts/rsl_rl/train_race.py
+	modified:   src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	logs/rsl_rl/quadcopter_direct/2025-11-23_01-23-13/
+	logs/rsl_rl/quadcopter_direct/2025-11-23_01-24-24/
+	logs/rsl_rl/quadcopter_direct/2025-11-23_03-52-51/
+	logs/rsl_rl/quadcopter_direct/2025-11-23_05-06-34/
+
+no changes added to commit (use "git add" and/or "git commit -a") 
+
+
+--- git diff ---
+diff --git a/scripts/rsl_rl/train_race.py b/scripts/rsl_rl/train_race.py
+index b3b310c..0b6a570 100644
+--- a/scripts/rsl_rl/train_race.py
++++ b/scripts/rsl_rl/train_race.py
+@@ -114,6 +114,7 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
+     centering_reward_scale = 20.0           # Reward for being centered in gate
+     alignment_reward_scale = 10.0           # Increased reward for pointing towards target
+     velocity_reward_scale = 0.0             # Disable direct reward for speed (focus on gates)
++    stagnation_penalty_scale = -2.0         # Small penalty for hovering near later gates
+     crash_reward_scale = -100.0             # Penalty for crashing
+     low_altitude_penalty_scale = -10.0      # Penalty for flying too low
+     ang_vel_penalty_scale = -0.1            # Small penalty for smoothness
+@@ -126,6 +127,7 @@ def main(env_cfg: ManagerBasedRLEnvCfg | DirectRLEnvCfg | DirectMARLEnvCfg, agen
+         'centering_reward_scale': centering_reward_scale,
+         'alignment_reward_scale': alignment_reward_scale,
+         'velocity_reward_scale': velocity_reward_scale,
++        'stagnation_penalty_scale': stagnation_penalty_scale,
+         'crash_reward_scale': crash_reward_scale,
+         'low_altitude_penalty_scale': low_altitude_penalty_scale,
+         'ang_vel_penalty_scale': ang_vel_penalty_scale,
+diff --git a/src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py b/src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py
+index 857744f..c7d4fa5 100644
+--- a/src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py
++++ b/src/isaac_quad_sim2real/tasks/race/config/crazyflie/quadcopter_strategies.py
+@@ -99,6 +99,14 @@ class DefaultQuadcopterStrategy:
+         # Update previous distance
+         self.env._prev_dist_to_target = dist_to_target.clone()
+ 
++        # 1.5 Stagnation penalty: if we are near the target but not making progress
++        # (especially on later gates), add a small penalty to discourage hovering.
++        near_target = dist_to_target < 0.6
++        low_progress = torch.abs(progress_reward) < 1e-3
++        later_gates = self.env._idx_wp >= 4  # only from 5th gate onward
++        stagnation_mask = near_target & low_progress & later_gates
++        stagnation_penalty = stagnation_mask.float()
++
+         # 2. Distance Reward: Exponential penalty for being far from target
+         distance_reward = torch.exp(-0.5 * dist_to_target)
+ 
+@@ -190,6 +198,7 @@ class DefaultQuadcopterStrategy:
+             rewards = {
+                 "gate_pass": gate_pass_reward * self.env.rew['gate_pass_reward_scale'],
+                 "progress": progress_reward * self.env.rew['progress_reward_scale'],
++                "stagnation": stagnation_penalty * self.env.rew['stagnation_penalty_scale'],
+                 "distance": distance_reward * self.env.rew['distance_reward_scale'],
+                 "centering": centering_reward * self.env.rew['centering_reward_scale'],
+                 "alignment": alignment_reward * self.env.rew['alignment_reward_scale'],
